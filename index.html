@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>M2T2: Multi-Task Masked Transformer for Object-centric Pick and Place</title>
+    <title>Diffusion Policy: Diffusion with force</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120436611-3"></script>
     <script>
@@ -22,8 +22,8 @@
   <body>
     <br>
     <center>
-      <h1 class="title">M2T2: <b>M</b>ulti-<b>T</b>ask <b>M</b>asked-<b>T</b>ransformer</h1>
-      <h1 class="subtitle">for Object-centric Pick and Place</h1>
+      <h1 class="title">Diffusion: <b>D</b>iffusion Policy with force</h1>
+      <h1 class="subtitle">Battery recycle</h1>
     </center>
 
     <br>
@@ -31,22 +31,22 @@
       <tr>
         <td align=center width=120px>
           <center>
-            <span class="author"><a href="https://wentaoyuan.github.io">Wentao Yuan</a><sup>1</sup></span>
+            <span class="author"><a href="https://Jeon.github.io">Jeon Ho Kang</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="author"><a href="http://adithyamurali.com">Adithya Murali</a><sup>2*</sup></span>
+            <span class="author"><a href="http://Sargar.com">Sargar</a><sup>2*</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="author"><a href="https://research.nvidia.com/person/arsalan-mousavian">Arsalan Mousavian</a><sup>2*</sup></span>
+            <span class="author"><a href="https://ruopeng.com">Ruopeng Huang</a><sup>2*</sup></span>
           </center>
         </td>
         <td align=center width=120px>
           <center>
-            <span class="author"><a href="https://homes.cs.washington.edu/~fox">Dieter Fox</a><sup>1,2</sup></span>
+            <span class="author"><a href="https://sk.com">SK Gupta</a><sup>1,2</sup></span>
           </center>
         </td>
       </tr>
@@ -56,12 +56,7 @@
       <tr>
         <td align=center width=100px>
           <center>
-            <span class="author"><sup>1</sup>University of Washington</span>
-          </center>
-        </td>
-        <td align=center width=100px>
-          <center>
-            <span class="author"><sup>2</sup>NVIDIA</span>
+            <span class="author"><sup>1</sup>University of Southern California</span>
           </center>
         </td>
       </tr>
@@ -73,32 +68,32 @@
           <td align=center width=50%>
             <center>
               <img class="layered-paper" width=12% src="images/page1.png"/>
-              <p class="sectitle"><a href="https://arxiv.org/abs/2311.00926">Paper</a></p>
+              <p class="sectitle"><a href="https://arxiv.org/abs/11111">Paper</a></p>
             </center>
           </td>
           <td align=center width=50%>
             <center>
               <img width=20% src="images/github.png"/>
-              <p class="sectitle"><a href="https://github.com/NVlabs/M2T2">Code</a></p>
+              <p class="sectitle"><a href="https://github.com/RRoS/Diffusion-with-force">Code</a></p>
             </center>
           </td>
         </tr>
       </table>
       <div class="container widget_container">
         <video controls playsinline class="on">
-          <source src="videos/spotlight.mp4" type="video/mp4"/>
+          <source src="videos/11111.mp4" type="video/mp4"/>
         </video>
       </div>
       <p class="text">
-        M2T2 is a unified transformer model that predicts target gripper poses for various action primitives. From a raw 3D point cloud, M2T2 predicts collision-free 6-DoF grasps for each object on the table and orientation-aware placements for the object held by the robot.
+        Diffusion model with force is XXXXXXXXXX.
       </p>
-      <img src="images/teaser.png"></img>
+      <img src="images/2222.png"></img>
     </div>
 
     <div class="container grey_container" id="video">
-      <center><h2 class="sectitle">Real-world Pick-and-place</h2></center>
+      <center><h2 class="sectitle">Real-world battery recycle</h2></center>
       <p class="text">
-        M2T2 achieves zero-shot Sim2Real transfer for picking and placing out-of-distribution objects, outperforming a baseline system consisting of state-of-the-art task-specific methods by 19% in success rate. 
+       Diffusion model with force. 
       </p>
       <div class="container widget_container" load="lazy">
         <div class="buttons">
@@ -111,15 +106,15 @@
           <button id="scene6" value="scene7">Scene 7</button>
         </div>
         <div class="buttons">
-          <button id="method0" value="ours" class="on">M2T2</button>
-          <button id="method1" value="baseline">Contact-GraspNet + CabiNet</button>
+          <button id="method0" value="ours" class="on">Diffusion with force</button>
+          <button id="method1" value="baseline">Diffusion without force</button>
         </div>
         <div class="container video_container">
           <video id="video0" controls loop muted playsinline class="on">
-            <source src="videos/scene1_ours.mp4" type="video/mp4"/>
+            <source src="videos/111.mp4" type="video/mp4"/>
           </video>
           <video id="video1" controls loop muted playsinline>
-            <source src="videos/scene1_baseline.mp4" type="video/mp4"/>
+            <source src="videos/1111.mp4" type="video/mp4"/>
           </video>
         </div>
       </div>
@@ -128,36 +123,36 @@
     <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
       <p class="text">
-        M2T2 uses cross-attention between learned embeddings and multi-scale point cloud features to produce per-point contact masks, indicating where to make contact for picking and placing actions. Our general pick-and-place network produces G object-specific grasping masks, 1 for each graspable object in the scene, and P orientation-specific placement masks, 1 for each discretized planar rotation. 6-DoF gripper poses are then reconstructed using the contact masks and the point cloud.
+        Diffusion model network
       </p>
       <div class="container">
         <img src="images/network.png"></img>
       </div>
       <p class="text">
-        M2T2 can also take other conditional inputs (e.g. language goal) to predict task-specific grasps/placements. Below is the architecture for M2T2 trained on RLBench, which is conditioned on language tokens embedded by a pretrained CLIP model.
+        Diffusion model with force.
       </p>
       <div class="container">
-        <img src="images/rlbench_network.png"></img>
+        <img src="images/rlbench_network1.png"></img>
       </div>
     </div>
 
     <div class="container grey_container" id="rlbench">
-      <center><h2 class="sectitle">RLBench</h2></center>
+      <center><h2 class="sectitle">Evaluation</h2></center>
       <p class="text">
-        M2T2 can perform various complex tasks with a single model by decomposing the task into pick-and-place sequences. Below are some examples from the evaluation on RLBench. M2T2 achieves 89.3%, 88.0%, 86.7% success rate on open drawer, turn tap and meet off grill respectively, whereas PerAct, a state-of-the-art multi-task model, achieves 80%, 80%, 84%.
+        Diffusion model with force is work better than human for long time working.
       </p>
       <div class="container widget_container" load="lazy">
         <div class="buttons">
-          <button id="task0" value="meat_off_grill" class="on">meat_off_grill</button>
-          <button id="task1" value="open_drawer">open_drawer</button>
-          <button id="task2" value="turn_tap">turn_tap</button>
+          <button id="task0" value="object1" class="on">object1</button>
+          <button id="task1" value="object2">object2</button>
+          <button id="task2" value="object3">object3</button>
         </div>
         <div class="buttons">
-          <button id="seed0" value="s0" class="on">seed 0</button>
-          <button id="seed1" value="s1">seed 1</button>
-          <button id="seed2" value="s2">seed 2</button>
-          <button id="seed3" value="s3">seed 3</button>
-          <button id="seed4" value="s4">seed 4</button>
+          <button id="seed0" value="s0" class="on">position 0</button>
+          <button id="seed1" value="s1">position 1</button>
+          <button id="seed2" value="s2">position 2</button>
+          <button id="seed3" value="s3">position 3</button>
+          <button id="seed4" value="s4">position 4</button>
         </div>
         <div class="container video_container">
           <video id="demo0" controls loop muted playsinline class="on">
@@ -183,9 +178,9 @@
       <center><h2 class="sectitle">Citation</h2></center>
       <div class="text citation">
         @inproceedings{yuan2023m2t2,<br>
-          &nbsp; &nbsp; title={M2T2: Multi-Task Masked Transformer for Object-centric Pick and Place},<br>
-          &nbsp; &nbsp; author={Yuan, Wentao and Murali, Adithyavairavan and Mousavian, Arsalan and Fox, Dieter},<br>
-          &nbsp; &nbsp; booktitle={7th Annual Conference on Robot Learning},<br>
+          &nbsp; &nbsp; title={Diffusion},<br>
+          &nbsp; &nbsp; author={jjjjjj},<br>
+          &nbsp; &nbsp; booktitle={ROS},<br>
           &nbsp; &nbsp; year={2023}<br>
         }
       </div>
