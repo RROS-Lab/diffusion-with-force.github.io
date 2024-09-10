@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>M2T2: Multi-Task Masked Transformer for Object-centric Pick and Place</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120436611-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-120436611-3');
+    </script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <script src="video.js"></script>
+
+    <link rel="StyleSheet" href="style.css" type="text/css"/>
+  </head>
+
+  <body>
+    <br>
+    <center>
+      <h1 class="title">M2T2: <b>M</b>ulti-<b>T</b>ask <b>M</b>asked-<b>T</b>ransformer</h1>
+      <h1 class="subtitle">for Object-centric Pick and Place</h1>
+    </center>
+
+    <br>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=120px>
+          <center>
+            <span class="author"><a href="https://wentaoyuan.github.io">Wentao Yuan</a><sup>1</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="author"><a href="http://adithyamurali.com">Adithya Murali</a><sup>2*</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="author"><a href="https://research.nvidia.com/person/arsalan-mousavian">Arsalan Mousavian</a><sup>2*</sup></span>
+          </center>
+        </td>
+        <td align=center width=120px>
+          <center>
+            <span class="author"><a href="https://homes.cs.washington.edu/~fox">Dieter Fox</a><sup>1,2</sup></span>
+          </center>
+        </td>
+      </tr>
+    </table>
+
+    <table align=center width=700px>
+      <tr>
+        <td align=center width=100px>
+          <center>
+            <span class="author"><sup>1</sup>University of Washington</span>
+          </center>
+        </td>
+        <td align=center width=100px>
+          <center>
+            <span class="author"><sup>2</sup>NVIDIA</span>
+          </center>
+        </td>
+      </tr>
+    </table>
+
+    <div class="container">
+      <table align=center width=60%>
+        <tr>
+          <td align=center width=50%>
+            <center>
+              <img class="layered-paper" width=12% src="images/page1.png"/>
+              <p class="sectitle"><a href="https://arxiv.org/abs/2311.00926">Paper</a></p>
+            </center>
+          </td>
+          <td align=center width=50%>
+            <center>
+              <img width=20% src="images/github.png"/>
+              <p class="sectitle"><a href="https://github.com/NVlabs/M2T2">Code</a></p>
+            </center>
+          </td>
+        </tr>
+      </table>
+      <div class="container widget_container">
+        <video controls playsinline class="on">
+          <source src="videos/spotlight.mp4" type="video/mp4"/>
+        </video>
+      </div>
+      <p class="text">
+        M2T2 is a unified transformer model that predicts target gripper poses for various action primitives. From a raw 3D point cloud, M2T2 predicts collision-free 6-DoF grasps for each object on the table and orientation-aware placements for the object held by the robot.
+      </p>
+      <img src="images/teaser.png"></img>
+    </div>
+
+    <div class="container grey_container" id="video">
+      <center><h2 class="sectitle">Real-world Pick-and-place</h2></center>
+      <p class="text">
+        M2T2 achieves zero-shot Sim2Real transfer for picking and placing out-of-distribution objects, outperforming a baseline system consisting of state-of-the-art task-specific methods by 19% in success rate. 
+      </p>
+      <div class="container widget_container" load="lazy">
+        <div class="buttons">
+          <button id="scene0" value="scene1" class="on">Scene 1</button>
+          <button id="scene1" value="scene2">Scene 2</button>
+          <button id="scene2" value="scene3">Scene 3</button>
+          <button id="scene3" value="scene4">Scene 4</button>
+          <button id="scene4" value="scene5">Scene 5</button>
+          <button id="scene5" value="scene6">Scene 6</button>
+          <button id="scene6" value="scene7">Scene 7</button>
+        </div>
+        <div class="buttons">
+          <button id="method0" value="ours" class="on">M2T2</button>
+          <button id="method1" value="baseline">Contact-GraspNet + CabiNet</button>
+        </div>
+        <div class="container video_container">
+          <video id="video0" controls loop muted playsinline class="on">
+            <source src="videos/scene1_ours.mp4" type="video/mp4"/>
+          </video>
+          <video id="video1" controls loop muted playsinline>
+            <source src="videos/scene1_baseline.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="network">
+      <center><h2 class="sectitle">Network Architecture</h2></center>
+      <p class="text">
+        M2T2 uses cross-attention between learned embeddings and multi-scale point cloud features to produce per-point contact masks, indicating where to make contact for picking and placing actions. Our general pick-and-place network produces G object-specific grasping masks, 1 for each graspable object in the scene, and P orientation-specific placement masks, 1 for each discretized planar rotation. 6-DoF gripper poses are then reconstructed using the contact masks and the point cloud.
+      </p>
+      <div class="container">
+        <img src="images/network.png"></img>
+      </div>
+      <p class="text">
+        M2T2 can also take other conditional inputs (e.g. language goal) to predict task-specific grasps/placements. Below is the architecture for M2T2 trained on RLBench, which is conditioned on language tokens embedded by a pretrained CLIP model.
+      </p>
+      <div class="container">
+        <img src="images/rlbench_network.png"></img>
+      </div>
+    </div>
+
+    <div class="container grey_container" id="rlbench">
+      <center><h2 class="sectitle">RLBench</h2></center>
+      <p class="text">
+        M2T2 can perform various complex tasks with a single model by decomposing the task into pick-and-place sequences. Below are some examples from the evaluation on RLBench. M2T2 achieves 89.3%, 88.0%, 86.7% success rate on open drawer, turn tap and meet off grill respectively, whereas PerAct, a state-of-the-art multi-task model, achieves 80%, 80%, 84%.
+      </p>
+      <div class="container widget_container" load="lazy">
+        <div class="buttons">
+          <button id="task0" value="meat_off_grill" class="on">meat_off_grill</button>
+          <button id="task1" value="open_drawer">open_drawer</button>
+          <button id="task2" value="turn_tap">turn_tap</button>
+        </div>
+        <div class="buttons">
+          <button id="seed0" value="s0" class="on">seed 0</button>
+          <button id="seed1" value="s1">seed 1</button>
+          <button id="seed2" value="s2">seed 2</button>
+          <button id="seed3" value="s3">seed 3</button>
+          <button id="seed4" value="s4">seed 4</button>
+        </div>
+        <div class="container video_container">
+          <video id="demo0" controls loop muted playsinline class="on">
+            <source src="videos/meat_off_grill_s0.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo1" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s1.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo2" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s2.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo3" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s3.mp4" type="video/mp4"/>
+          </video>
+          <video id="demo4" controls loop muted playsinline>
+            <source src="videos/meat_off_grill_s4.mp4" type="video/mp4"/>
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <center><h2 class="sectitle">Citation</h2></center>
+      <div class="text citation">
+        @inproceedings{yuan2023m2t2,<br>
+          &nbsp; &nbsp; title={M2T2: Multi-Task Masked Transformer for Object-centric Pick and Place},<br>
+          &nbsp; &nbsp; author={Yuan, Wentao and Murali, Adithyavairavan and Mousavian, Arsalan and Fox, Dieter},<br>
+          &nbsp; &nbsp; booktitle={7th Annual Conference on Robot Learning},<br>
+          &nbsp; &nbsp; year={2023}<br>
+        }
+      </div>
+    </div>
+
+  </body>
+</html>
