@@ -36,7 +36,7 @@
         </td>
         <td align=center width=120px>
           <center>
-            <span class="author"><a href="http://Sargar.com">Sargar</a><sup>1</sup></span>
+            <span class="author"><a href="http://Sargar.com">Sagar</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=120px>
@@ -92,21 +92,38 @@
       </div>
     </div>
 
+    <!-- Abstract Section -->
+    <div class="container" id="abstract">
+      <center><h2 class="sectitle">Abstract</h2></center>
+      <p class="text">
+          This section provides a summary of the research objectives, methodology, and findings regarding the diffusion model for battery disassembly. It outlines the approach to improving robotic manipulation by integrating physical and sensor data within the model training process, aiming to enhance the robot's accuracy and precision.
+      </p>
+    </div>
+
+    <!-- Images of Battery Products Section -->
+    <div class="container" id="battery-images">
+      <center><h2 class="sectitle">Images of Battery Products</h2></center>
+      <div class="container">
+          <img src="images/Battery_products.png" alt="Battery Products">
+      </div>
+    </div>
+
+
 
     <div class="container grey_container" id="video">
-      <center><h2 class="sectitle">Real-world battery recycle</h2></center>
+      <center><h2 class="sectitle">Inference Videos</h2></center>
       <p class="text">
        Diffusion model with force. 
       </p>
       <div class="container widget_container" load="lazy">
         <div class="buttons">
-          <button id="scene0" value="scene1" class="on">Scene 1</button>
-          <button id="scene1" value="scene2">Scene 2</button>
-          <button id="scene2" value="scene3">Scene 3</button>
-          <button id="scene3" value="scene4">Scene 4</button>
-          <button id="scene4" value="scene5">Scene 5</button>
-          <button id="scene5" value="scene6">Scene 6</button>
-          <button id="scene6" value="scene7">Scene 7</button>
+          <button id="scene0" value="scene1" class="on">Object 1</button>
+          <button id="scene1" value="scene2">Object 2</button>
+          <button id="scene2" value="scene3">Object 3</button>
+          <button id="scene3" value="scene4">Object 4</button>
+          <button id="scene4" value="scene5">Object 5</button>
+          <button id="scene5" value="scene6">Object 6</button>
+          <button id="scene6" value="scene7">Object 7</button>
         </div>
         <div class="buttons">
           <button id="method0" value="ours" class="on">Diffusion with force</button>
@@ -114,61 +131,26 @@
         </div>
         <div class="container video_container">
           <video id="video0" controls loop muted playsinline class="on">
-            <source src="videos/111.mp4" type="video/mp4"/>
+            <source src="videos/scene1_ours.mp4" type="video/mp4"/>
           </video>
           <video id="video1" controls loop muted playsinline>
-            <source src="videos/1111.mp4" type="video/mp4"/>
+            <source src="videos/scene1_baseline.mp4" type="video/mp4"/>
           </video>
         </div>
+      </div>
+    </div>
+
+
+     <!-- Images of Result -->
+     <div class="container" id="battery-images">
+      <center><h2 class="sectitle">Images Results</h2></center>
+      <div class="container">
+          <img src="images/Results.jpg" alt="Results">
       </div>
     </div>
 
   
-      <p class="text">
-        Diffusion model with force.
-      </p>
-      <div class="container">
-        <img src="images/rlbench_network1.png"></img>
-      </div>
-    </div>
-
-    <div class="container grey_container" id="rlbench">
-      <center><h2 class="sectitle">Evaluation</h2></center>
-      <p class="text">
-        Diffusion model with force is work better than human for long time working.
-      </p>
-      <div class="container widget_container" load="lazy">
-        <div class="buttons">
-          <button id="task0" value="object1" class="on">object1</button>
-          <button id="task1" value="object2">object2</button>
-          <button id="task2" value="object3">object3</button>
-        </div>
-        <div class="buttons">
-          <button id="seed0" value="s0" class="on">position 0</button>
-          <button id="seed1" value="s1">position 1</button>
-          <button id="seed2" value="s2">position 2</button>
-          <button id="seed3" value="s3">position 3</button>
-          <button id="seed4" value="s4">position 4</button>
-        </div>
-        <div class="container video_container">
-          <video id="demo0" controls loop muted playsinline class="on">
-            <source src="videos/meat_off_grill_s01.mp4" type="video/mp4"/>
-          </video>
-          <video id="demo1" controls loop muted playsinline>
-            <source src="videos/meat_off_grill_s11.mp4" type="video/mp4"/>
-          </video>
-          <video id="demo2" controls loop muted playsinline>
-            <source src="videos/meat_off_grill_s21.mp4" type="video/mp4"/>
-          </video>
-          <video id="demo3" controls loop muted playsinline>
-            <source src="videos/meat_off_grill_s31.mp4" type="video/mp4"/>
-          </video>
-          <video id="demo4" controls loop muted playsinline>
-            <source src="videos/meat_off_grill_s4.mp4" type="video/mp4"/>
-          </video>
-        </div>
-      </div>
-    </div>
+    
 
     <div class="container widget_container">
       <video controls playsinline class="on">
