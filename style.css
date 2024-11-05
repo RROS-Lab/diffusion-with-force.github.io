@@ -121,6 +121,21 @@ video.on {
 	display: block;
 }
 
+
+/* Layout for Representative Failure Cases: Three videos in one row */
+.failure-videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Layout for Funny Cases: Two videos in one row */
+.funny-videos {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
 a:link,a:visited {
     color: #1367a7;
     text-decoration: none;
