@@ -90,6 +90,29 @@
     padding-bottom:25px;
 }
 
+.top-image img {
+    width: 100%; /* Full width for the top image */
+    max-width: 800px; /* Optional: limit max width */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.bottom-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+.image-case {
+    width: 45%; /* Adjust to control the width of each bottom image */
+}
+
+.image-case img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 img {
     max-width: 100%;
     height: auto;
