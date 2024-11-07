@@ -211,32 +211,63 @@ a:hover {
     max-width: 80%;
     height: auto;
   }
-  /* Align and Style Images in Rows */
-.bottom-images {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    gap: 20px; /* Adds space between the images */
-    flex-wrap: wrap;
-  }
-  
-  .image-case {
-    flex: 1 1 calc(33.333% - 20px); /* Three images per row */
+/* Container for single top image */
+.image-single {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Common styling for all images */
+  .image-case {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
   .image-case img {
-    max-width: 100%; /* Responsive image scaling */
+    max-width: 100%;
     height: auto;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a cleaner look */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
   }
   
-  /* Specific styling for failure mode images */
-  .force .image-case {
-    flex: 1 1 calc(50% - 20px); /* Two images per row */
+  /* Style for images in a row */
+  .bottom-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Specific size adjustments for Force Trend and Failure Mode images */
+  .large-image {
+    width: 80%; /* Adjust this percentage as needed for a larger size */
+  }
+  
+  .small-image {
+    width: 60%; /* Adjust this percentage as needed for a smaller size */
+  }
+  
+  /* Styling for captions */
+  .caption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .bottom-images {
+      flex-direction: column;
+      align-items: center;
+    }
+    .large-image,
+    .small-image {
+      width: 80%; /* Adjust as needed for mobile scaling */
+    }
   }
   
   

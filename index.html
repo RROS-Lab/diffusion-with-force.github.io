@@ -301,28 +301,38 @@
       </div>
       
       <!-- Bottom Two Images in a Row -->
-<!-- Bottom Images in a Row -->
-<div class="bottom-images">
+<!-- Bar Chart Image (Single Row) -->
+<div class="image-single">
   <div class="image-case">
     <img src="images/bar_chart_time.png" alt="Time Taken Comparison">
-  </div>
-  <div class="image-case">
-    <img src="images/force_seen.png" alt="Peak Force Comparison (In Distribution)">
-  </div>
-  <div class="image-case">
-    <img src="images/force_unseen.png" alt="Peak Force Comparison (Out of Distribution)">
+    <p class="caption">Comparison of Time Taken</p>
   </div>
 </div>
 
-<!-- Failure Modes Section -->
-<div class="bottom-images force">
+<!-- Force Images (Two in a Row) -->
+<div class="bottom-images">
   <div class="image-case">
-    <img src="images/force_line.png" alt="Force Trend">
+    <img src="images/force_seen.png" alt="Peak Force Comparison (In Distribution)">
+    <p class="caption">Comparison of Peak Force (In Distribution)</p>
   </div>
   <div class="image-case">
-    <img src="images/failure_force.png" alt="Failure Mode">
+    <img src="images/force_unseen.png" alt="Peak Force Comparison (Out of Distribution)">
+    <p class="caption">Comparison of Peak Force (Out of Distribution)</p>
   </div>
 </div>
+
+<!-- Force Trend and Failure Mode Images (Scaled for Similar Size) -->
+<div class="bottom-images force">
+  <div class="image-case">
+    <img src="images/force_line.png" alt="Force Trend" class="small-image">
+    <p class="caption">Force Trend Over Time</p>
+  </div>
+  <div class="image-case">
+    <img src="images/failure_force.png" alt="Failure Mode" class="large-image">
+    <p class="caption">Representative Failure Mode</p>
+  </div>
+</div>
+
 
 
 
