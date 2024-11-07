@@ -211,4 +211,32 @@ a:hover {
     max-width: 80%;
     height: auto;
   }
+  /* Align and Style Images in Rows */
+.bottom-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px; /* Adds space between the images */
+    flex-wrap: wrap;
+  }
+  
+  .image-case {
+    flex: 1 1 calc(33.333% - 20px); /* Three images per row */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-case img {
+    max-width: 100%; /* Responsive image scaling */
+    height: auto;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a cleaner look */
+  }
+  
+  /* Specific styling for failure mode images */
+  .force .image-case {
+    flex: 1 1 calc(50% - 20px); /* Two images per row */
+  }
+  
   
