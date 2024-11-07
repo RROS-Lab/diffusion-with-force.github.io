@@ -96,7 +96,27 @@
     <div class="container" id="abstract">
       <center><h2 class="sectitle">Abstract</h2></center>
       <p class="text">
-          This section provides a summary of the research objectives, methodology, and findings regarding the diffusion model for battery disassembly. It outlines the approach to improving robotic manipulation by integrating physical and sensor data within the model training process, aiming to enhance the robot's accuracy and precision.
+        Usage of battery powered products have been
+        significantly increasing in recent years from automotive, house
+        hold products and electronics. However, compared to increase
+        in manufactured batteries, means to recycle and repurpose
+        batteries is limited. Batteries are usually stored in casing or
+        products in fastened manner and is often hard to manipulate
+        and allow for little tolerance. To address this issue, we propose
+        battery extraction from different parts using diffusion policy
+        that have proven to be able to learn from human behavior
+        and robustly learn sequence of actions. Particularly, this work
+        proposes a diffusion policy for action generation conditioned
+        on vision and force data. We validate our method on bimanual
+        setup where one arm is responsible for battery extraction
+        and the other arm is responsible for holding, transporting
+        and dumping the extracted batteries. We test our method
+        on various kinds of battery-powered products and show that
+        our model can effectively perform extraction of the battery.
+        Our contributions include a full robotic framework for battery
+        extraction and recycling and a novel approach to encode force
+        data for diffusion policy training for conditioning generated
+        actions on extra sensor modality. 
       </p>
     </div>
 
@@ -104,13 +124,13 @@
     <div class="container" id="battery-images">
       <center><h2 class="sectitle">Images of Battery Products</h2></center>
       <div class="container">
-          <img src="images/Battery_products.png" alt="Battery Products">
+          <img src="images/ex_products.png" alt="Battery Products">
       </div>
     </div>
 
 
 
-    <div class="container grey_container" id="video">
+    <!-- <div class="container grey_container" id="video">
       <center><h2 class="sectitle">Inference Videos</h2></center>
       <p class="text">
        Diffusion model with force. 
@@ -136,7 +156,7 @@
           </video>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
  
