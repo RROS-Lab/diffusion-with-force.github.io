@@ -84,9 +84,6 @@
 
     <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
-      <p class="text">
-        Diffusion model network
-      </p>
       <div class="container">
         <img src="images/system_architecture_opt3.png"></img>
       </div>
@@ -165,9 +162,140 @@
     <div class="container" id="result">
       <center><h2 class="sectitle">Image Results</h2></center>
       
-      <!-- Top Image -->
-      <div class="top-image">
-          <img src="images/result_top.jpg" alt="Top Result">
+      <!-- Success Rate Table -->
+      <div class="table-container">
+          <style>
+              .results-table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin: 20px 0;
+                  font-size: 14px;
+              }
+  
+              .results-table th, .results-table td {
+                  border: 1px solid #ddd;
+                  padding: 8px;
+                  text-align: center;
+              }
+  
+              .results-table th {
+                  background-color: #f5f5f5;
+                  font-weight: bold;
+              }
+  
+              .results-table .highlight {
+                  font-weight: bold;
+              }
+          </style>
+  
+          <table class="results-table">
+              <tr>
+                  <th rowspan="2"></th>
+                  <th colspan="4">AAA</th>
+                  <th colspan="4">AA</th>
+                  <th colspan="4">C</th>
+                  <th colspan="4">D</th>
+                  <th rowspan="2">Avg. Success Rate</th>
+              </tr>
+              <tr>
+                  <th>Obj1</th>
+                  <th>Obj2*</th>
+                  <th>Obj3*</th>
+                  <th>Avg.</th>
+                  <th>Obj4</th>
+                  <th>Obj5</th>
+                  <th>Obj6</th>
+                  <th>Avg.</th>
+                  <th>Obj7</th>
+                  <th>Obj8</th>
+                  <th>Obj9</th>
+                  <th>Avg.</th>
+                  <th>Obj10</th>
+                  <th>Obj11*</th>
+                  <th>Obj12*</th>
+                  <th>Avg.</th>
+              </tr>
+              <tr>
+                  <td>DP-B</td>
+                  <td>0.0</td>
+                  <td>0.5</td>
+                  <td>0.7</td>
+                  <td>0.4</td>
+                  <td>0.2</td>
+                  <td>0.3</td>
+                  <td>0.1</td>
+                  <td>0.2</td>
+                  <td>0.4</td>
+                  <td>0.4</td>
+                  <td>0.3</td>
+                  <td>0.37</td>
+                  <td>0.4</td>
+                  <td>0.8</td>
+                  <td>0.6</td>
+                  <td>0.6</td>
+                  <td>0.41</td>
+              </tr>
+              <tr>
+                  <td>DP-LF</td>
+                  <td>0.2</td>
+                  <td>0.4</td>
+                  <td>0.7</td>
+                  <td>0.43</td>
+                  <td>0.5</td>
+                  <td>0.4</td>
+                  <td>0.3</td>
+                  <td>0.4</td>
+                  <td>0.1</td>
+                  <td>0.4</td>
+                  <td>0.8</td>
+                  <td>0.43</td>
+                  <td>0.6</td>
+                  <td>0.5</td>
+                  <td>0.9</td>
+                  <td>0.67</td>
+                  <td>0.53</td>
+              </tr>
+              <tr>
+                  <td>DP-PF</td>
+                  <td>0.4</td>
+                  <td>0.7</td>
+                  <td>0.8</td>
+                  <td>0.63</td>
+                  <td>0.5</td>
+                  <td>0.7</td>
+                  <td>0.5</td>
+                  <td>0.57</td>
+                  <td>0.2</td>
+                  <td>0.3</td>
+                  <td>0.7</td>
+                  <td>0.4</td>
+                  <td>0.4</td>
+                  <td>0.7</td>
+                  <td>0.9</td>
+                  <td>0.67</td>
+                  <td>0.55</td>
+              </tr>
+              <tr class="highlight">
+                  <td>DP-CA (Ours)</td>
+                  <td>0.9</td>
+                  <td>0.9</td>
+                  <td>0.9</td>
+                  <td>0.9</td>
+                  <td>1.0</td>
+                  <td>0.9</td>
+                  <td>1.0</td>
+                  <td>0.97</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>1.0</td>
+                  <td>0.96</td>
+              </tr>
+          </table>
       </div>
       
       <!-- Bottom Two Images in a Row -->
@@ -179,7 +307,7 @@
               <img src="images/Results.jpg" alt="Right Result">
           </div>
       </div>
-    </div>
+  </div>
 
 
   
