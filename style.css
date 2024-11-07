@@ -197,3 +197,18 @@ a:hover {
     margin-right: 30px;
     margin-bottom: 5px;
 }
+/* Center the heading */
+#battery-images .sectitle {
+    text-align: center;
+  }
+  
+  /* Center the image */
+  .image-container {
+    text-align: center;
+  }
+  
+  .centered-image {
+    max-width: 80%;
+    height: auto;
+  }
+  
