@@ -28,7 +28,7 @@
 
 .author{
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size:24px;
+    font-size:22px;
     font-weight:400;
     line-height:22px;
     margin-top:5px;
@@ -208,7 +208,7 @@ a:hover {
   }
   
   .centered-image {
-    max-width: 80%;
+    max-width: 55%;
     height: auto;
   }
 /* Container for single top image */
