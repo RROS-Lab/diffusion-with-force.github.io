@@ -12,18 +12,44 @@
       gtag('js', new Date());
       gtag('config', 'UA-120436611-3');
     </script>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
     <script src="video.js"></script>
 
     <link rel="StyleSheet" href="style.css" type="text/css"/>
-  </head>
+    <style>
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+      }
 
+      .usc-logo {
+        height: 60px;
+        width: auto;
+      }
+
+      .header .title {
+        font-size: 24px;
+        margin: 0;
+        color: #333;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  
   <body>
-    <br>
+    <div class="header">
+      <img src="images/usc-logo.png" alt="USC Logo" class="usc-logo">
+    </div>
+
     <center>
-      <h1 class="title">Diffusion: <b>D</b>iffusion Policy with force</h1>
-      <h1 class="subtitle">Battery recycle</h1>
+      <h1 class="title">Compliant Object Manipulation for Tight Tolerance Object Using Diffusion
+        Policy with Force Modality</h1>
     </center>
 
     <br>
@@ -31,22 +57,22 @@
       <tr>
         <td align=center width=150px>
           <center>
-            <span class="author"><a href="https://Jeon.github.io">Jeon Ho Kang</a><sup>1</sup></span>
+            <span class="author">Jeon Ho Kang</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=150px>
           <center>
-            <span class="author"><a href="http://Sargar.com">Sagar Joshi</a><sup>1</sup></span>
+            <span class="author">Sagar Joshi</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=150px>
           <center>
-            <span class="author"><a href="https://ruopeng.com">Ruopeng Huang</a><sup>1</sup></span>
+            <span class="author">Ruopeng Huang</a><sup>1</sup></span>
           </center>
         </td>
         <td align=center width=190px>
           <center>
-            <span class="author"><a href="https://sk.com">Satyandra K. Gupta</a><sup>1</sup></span>
+            <span class="author">Satyandra K. Gupta</a><sup>1</sup></span>
           </center>
         </td>
       </tr>
@@ -67,51 +93,49 @@
         <tr>
           <td align=center width=50%>
             <center>
-              <img class="layered-paper" width=12% src="images/page1.png"/>
-              <p class="sectitle"><a href="https://arxiv.org/abs/11111">Paper</a></p>
+              <img class="layered-paper" width=15% src="images/page2.png"/>
+              <p class="sectitle">Paper</a></p>
             </center>
           </td>
           <td align=center width=50%>
             <center>
-              <img width=20% src="images/github.png"/>
+              <img width=15% src="images/github.png"/>
               <p class="sectitle"><a href="https://github.com/JeonHoKang/Diffusion_Policy_ICRA">Code</a></p>
             </center>
           </td>
         </tr>
       </table>
+    </div>
 
+    <div class="container demo-videos">
+      <center><h2 class="sectitle">Project Demos</h2></center>
+      <div class="video-row">
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/4aaa_pry_success.mp4" type="video/mp4">
+          </video>
+          <p class="caption">AAA Battery</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/2aa_pry_success.mp4" type="video/mp4">
+          </video>
+          <p class="caption">AA Battery</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/2c_pry_success.mp4" type="video/mp4">
+          </video>
+          <p class="caption">C Battery</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/2d_pry_success.mp4" type="video/mp4">
+          </video>
+          <p class="caption">D Battery</p>
+        </div>
+      </div>
     </div>
-    <!-- Demo Videos Section (Four Videos Side by Side) -->
-<div class="container demo-videos">
-  <center><h2 class="sectitle">Project Demos</h2></center>
-  <div class="video-row">
-    <div class="video-case">
-      <video controls playsinline>
-        <source src="videos/4aaa_pry_success.mp4" type="video/mp4">
-      </video>
-      <p class="caption">Demo 1</p>
-    </div>
-    <div class="video-case">
-      <video controls playsinline>
-        <source src="videos/2aa_pry_success.mp4" type="video/mp4">
-      </video>
-      <p class="caption">Demo 2</p>
-    </div>
-    <div class="video-case">
-      <video controls playsinline>
-        <source src="videos/2c_pry_success.mp4" type="video/mp4">
-      </video>
-      <p class="caption">Demo 3</p>
-    </div>
-    <div class="video-case">
-      <video controls playsinline>
-        <source src="videos/2d_pry_success.mp4" type="video/mp4">
-      </video>
-      <p class="caption">Demo 4</p>
-    </div>
-  </div>
-</div>
-
 
     <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
@@ -120,7 +144,6 @@
       </div>
     </div>
 
-    <!-- Abstract Section -->
     <div class="container" id="abstract">
       <center><h2 class="sectitle">Abstract</h2></center>
       <p class="text">
@@ -148,54 +171,15 @@
       </p>
     </div>
 
-    <!-- Images of Battery Products Section -->
-  <!-- Images of Battery Products Section -->
-  <div class="container" id="battery-images">
-    <h2 class="sectitle">Images of Battery Products</h2>
-    <div class="container image-container">
-      <img src="images/ex_products.png" alt="Battery Products" class="centered-image">
-    </div>
-  </div>
-
-
-
-
-    <!-- <div class="container grey_container" id="video">
-      <center><h2 class="sectitle">Inference Videos</h2></center>
-      <p class="text">
-       Diffusion model with force. 
-      </p>
-      <div class="container widget_container" load="lazy">
-        <div class="buttons">
-          <button id="scene0" value="scene1" class="on">AAA</button>
-          <button id="scene1" value="scene2">AA</button>
-          <button id="scene2" value="scene3">C</button>
-          <button id="scene3" value="scene4">D</button>
-   
-        </div>
-        <div class="buttons">
-          <button id="method0" value="ours" class="on">Object 1</button>
-          <button id="method1" value="baseline">Object 2</button>
-        </div>
-        <div class="container video_container">
-          <video id="video0" controls loop muted playsinline class="on">
-            <source src="videos/scene1_ours.mp4" type="video/mp4"/>
-          </video>
-          <video id="video1" controls loop muted playsinline>
-            <source src="videos/scene1_baseline.mp4" type="video/mp4"/>
-          </video>
-        </div>
+    <div class="container" id="battery-images">
+      <h2 class="sectitle">Images of Battery Products</h2>
+      <div class="container image-container">
+        <img src="images/ex_products.png" alt="Battery Products" class="centered-image">
       </div>
-    </div> -->
+    </div>
 
-
- 
-
-    <!-- Images of Result -->
     <div class="container" id="result">
       <center><h2 class="sectitle">Image Results</h2></center>
-      
-      <!-- Success Rate Table -->
       <div class="table-container">
           <style>
               .results-table {
@@ -330,93 +314,67 @@
               </tr>
           </table>
       </div>
-      
-      <!-- Bottom Two Images in a Row -->
-<!-- Bar Chart Image (Single Row) -->
-<div class="image-single">
-  <div class="image-case">
-    <img src="images/bar_chart_time.png" alt="Time Taken Comparison">
-    <p class="caption">Comparison of Time Taken</p>
-  </div>
-</div>
 
-<!-- Force Images (Two in a Row) -->
-<div class="bottom-images">
-  <div class="image-case">
-    <img src="images/force_seen.png" alt="Peak Force Comparison (In Distribution)">
-    <p class="caption">Comparison of Peak Force (In Distribution)</p>
-  </div>
-  <div class="image-case">
-    <img src="images/force_unseen.png" alt="Peak Force Comparison (Out of Distribution)">
-    <p class="caption">Comparison of Peak Force (Out of Distribution)</p>
-  </div>
-</div>
+      <div class="image-single">
+        <div class="image-case">
+          <img src="images/bar_chart_time.png" alt="Time Taken Comparison">
+          <p class="caption">Comparison of Time Taken</p>
+        </div>
+      </div>
 
-<!-- Force Trend and Failure Mode Images (Scaled for Similar Size) -->
-<div class="image-single">
-  <div class="image-case">
-    <img src="images/force_line.png" alt="Force Trend" class="small-image">
-    <p class="caption">Force Trend Over Time</p>
-  </div>
-</div>
-<div class="image-single">
-  <div class="image-case">
-    <img src="images/failure_force.png" alt="Failure Mode" class="large-image">
-    <p class="caption">Representative Failure Mode</p>
-  </div>
-</div>
+      <div class="bottom-images">
+        <div class="image-case">
+          <img src="images/force_seen.png" alt="Peak Force Comparison (In Distribution)">
+          <p class="caption">Comparison of Peak Force (In Distribution)</p>
+        </div>
+        <div class="image-case">
+          <img src="images/force_unseen.png" alt="Peak Force Comparison (Out of Distribution)">
+          <p class="caption">Comparison of Peak Force (Out of Distribution)</p>
+        </div>
+      </div>
 
+      <div class="image-single">
+        <div class="image-case">
+          <img src="images/force_line.png" alt="Force Trend" class="small-image">
+          <p class="caption">Force Trend Over Time</p>
+        </div>
+      </div>
+      <div class="image-single">
+        <div class="image-case">
+          <img src="images/failure_force.png" alt="Failure Mode" class="large-image">
+          <p class="caption">Representative Failure Mode</p>
+        </div>
+      </div>
+    </div>
 
-
-
-  
-    <!-- Representative Failure Cases Section -->
     <div class="container" id="failure-cases">
       <center><h2 class="sectitle">Representative Failure Cases</h2></center>
       <div class="failure-grid">
         <div class="video-case">
-          <video controls playsinline>
+          <video controls playsinline autoplay muted loop>
             <source src="videos/fail1-converted.mp4" type="video/mp4">
           </video>
           <p class="caption">Failure Mode 1</p>
         </div>
         <div class="video-case">
-          <video controls playsinline>
+          <video controls playsinline autoplay muted loop>
             <source src="videos/fail2-converted.mp4" type="video/mp4">
           </video>
           <p class="caption">Failure Mode 2</p>
         </div>
         <div class="video-case">
-          <video controls playsinline>
+          <video controls playsinline autoplay muted loop>
             <source src="videos/fail3.mp4" type="video/mp4">
           </video>
           <p class="caption">Failure Mode 3</p>
         </div>
         <div class="video-case">
-          <video controls playsinline>
+          <video controls playsinline autoplay muted loop>
             <source src="videos/fail4-converted.mp4" type="video/mp4">
           </video>
           <p class="caption">Failure Mode 4</p>
         </div>
       </div>
     </div>
- 
-  
-
-
-    <!-- <div class="container">
-      <center><h2 class="sectitle">Citation</h2></center>
-      <div class="text citation">
-        @inproceedings{2024Diffusion,<br>
-          &nbsp; &nbsp; title={Diffusion},<br>
-          &nbsp; &nbsp; author={jjjjjj},<br>
-          &nbsp; &nbsp; booktitle={ROS},<br>
-          &nbsp; &nbsp; year={2024}<br>
-        }
-      </div>
-    </div> -->
-
-
-
   </body>
 </html>

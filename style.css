@@ -1,6 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+@import url("font-awesome.min.css");
+.usc-logo {
+    width: 20px;  /* Adjust the size as necessary */
+    height: auto;
+    margin-right: 20px;  /* Space between the logo and the title */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 .title{
-    font-family: Palatino, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size:60px;
+    font-family: "Source Sans Pro", Palatino, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:48px;
     font-weight:100;
     /* letter-spacing:4px; */
     line-height:64px;
@@ -18,7 +32,7 @@
 }
 
 .sectitle{
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:  "Source Sans Pro","Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:24px;
     font-weight:800;
     line-height:28px;
@@ -27,7 +41,7 @@
 }
 
 .author{
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:22px;
     font-weight:400;
     line-height:22px;
@@ -39,7 +53,7 @@
 }
 
 .text{
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:  FontAwesome, "Source Sans Pro", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:20px;
     font-weight:400;
     line-height:22px;
@@ -269,7 +283,7 @@ a:hover {
   
   /* Styling for captions */
   .caption {
-    font-size: 0.9em;
+    font-size: 18px;
     color: #555;
     margin-top: 5px;
   }
@@ -295,22 +309,26 @@ a:hover {
     }
   }
   /* General Styling for Videos */
-.video-case {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 10px;
+  .video-case {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin: 1rem;
+    text-align: center;
+}
+
+.video-case:hover {
+    transform: translateY(-2px);
 }
 
 .video-case video {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 .caption {
-  font-size: 0.9em;
+  font-size: 18px;
   color: #555;
   margin-top: 5px;
 }
@@ -318,34 +336,26 @@ a:hover {
 /* Styling for Demo Videos Row (Four Side by Side) */
 .demo-videos .video-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Creates two columns */
-  gap: 20px; /* Adjusts the space between videos */
-}
-
-/* Remove or comment out any Flexbox properties for .demo-videos .video-case */
-.demo-videos .video-case {
-  /* Remove the flex properties */
-  /* flex: 1 1 calc(25% - 20px); */
-  margin: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
 }
 
 /* Styling for Failure Cases 2x2 Grid */
 .failure-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns for 2x2 grid */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding: 1rem;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-  /* Stack demo videos vertically on smaller screens */
-  .demo-videos .video-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Stack failure videos in a single column on smaller screens */
+  .demo-videos .video-row,
   .failure-grid {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
 }
+
+
