@@ -136,7 +136,6 @@ button.on {
 }
 
 video {
-	display: none;
 	width: 100%;
 }
 
@@ -318,14 +317,16 @@ a:hover {
 
 /* Styling for Demo Videos Row (Four Side by Side) */
 .demo-videos .video-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two columns */
+  gap: 20px; /* Adjusts the space between videos */
 }
 
+/* Remove or comment out any Flexbox properties for .demo-videos .video-case */
 .demo-videos .video-case {
-  flex: 1 1 calc(25% - 20px); /* Each video takes up 25% of row, with space between */
+  /* Remove the flex properties */
+  /* flex: 1 1 calc(25% - 20px); */
+  margin: 10px;
 }
 
 /* Styling for Failure Cases 2x2 Grid */
