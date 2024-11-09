@@ -21,6 +21,20 @@
     margin-top:0;
     margin-bottom:0;
 }
+.divider{
+  height: 2px;
+  width: 40%; /* Even shorter line */
+  margin: 25px auto;
+  background: 
+      linear-gradient(
+          to right,
+          transparent,
+          #808080 30%,  /* Gray color */
+          #808080 70%,
+          transparent
+      );
+  position: relative;
+}
 
 .subtitle{
     font-family: Palatino, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -37,7 +51,7 @@
     font-weight:800;
     line-height:28px;
     margin-top:10px;
-    margin-bottom:10px;
+    margin-bottom:30px;
 }
 
 .author{

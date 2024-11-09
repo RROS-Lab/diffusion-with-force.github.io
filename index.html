@@ -136,6 +136,7 @@
         </div>
       </div>
     </div>
+    <div class="divider"></div>
     <div class="container" id="failure-cases">
       <center><h2 class="sectitle">Representative Failure Cases (Benchmark Methods)</h2></center>
       <div class="failure-grid">
@@ -143,36 +144,29 @@
           <video controls playsinline autoplay muted loop>
             <source src="videos/fail1-converted.mp4" type="video/mp4">
           </video>
-          <p class="caption">Failure Mode 1</p>
+          <p class="caption">Lost Coontact</p>
         </div>
         <div class="video-case">
           <video controls playsinline autoplay muted loop>
             <source src="videos/fail2-converted.mp4" type="video/mp4">
           </video>
-          <p class="caption">Failure Mode 2</p>
+          <p class="caption">Early Pry</p>
         </div>
         <div class="video-case">
           <video controls playsinline autoplay muted loop>
             <source src="videos/fail3.mp4" type="video/mp4">
           </video>
-          <p class="caption">Failure Mode 3</p>
+          <p class="caption">Failure to Insert</p>
         </div>
         <div class="video-case">
           <video controls playsinline autoplay muted loop>
             <source src="videos/fail4-converted.mp4" type="video/mp4">
           </video>
-          <p class="caption">Failure Mode 4</p>
+          <p class="caption">Not Enough Force</p>
         </div>
       </div>
     </div>
-
-    <div class="container" id="network">
-      <center><h2 class="sectitle">Network Architecture</h2></center>
-      <div class="container">
-        <img src="images/system_architecture_opt3.png"></img>
-      </div>
-    </div>
-
+    <div class="divider"></div>
     <div class="container" id="abstract">
       <center><h2 class="sectitle">Abstract</h2></center>
       <p class="text">
@@ -192,16 +186,27 @@
         augmentation method for force data. 
       </p>
     </div>
+    <div class="divider"></div>
 
-    <div class="container" id="battery-images">
-      <h2 class="sectitle">Images of Battery Products</h2>
-      <div class="container image-container">
-        <img src="images/ex_products.png" alt="Battery Products" class="centered-image">
+    <div class="container" id="network">
+      <center><h2 class="sectitle">Network Architecture</h2></center>
+      <div class="container">
+        <img src="images/system_architecture_opt3.png"></img>
       </div>
     </div>
 
+    <div class="divider"></div>
+
+    <div class="container" id="battery-images">
+      <h2 class="sectitle">Experiment Setup</h2>
+      <div class="container image-container">
+        <img src="images/ex_products.png" alt="?" class="centered-image">
+      </div>
+    </div>
+    <div class="divider"></div>
+
     <div class="container" id="result">
-      <center><h2 class="sectitle">Image Results</h2></center>
+      <center><h2 class="sectitle">Results</h2></center>
       <div class="table-container">
           <style>
               .results-table {
@@ -336,35 +341,38 @@
               </tr>
           </table>
       </div>
-
+      
       <div class="image-single">
         <div class="image-case">
           <img src="images/bar_chart_time.png" alt="Time Taken Comparison">
-          <p class="caption">Comparison of Time Taken</p>
+          <p class="caption">A comparison of the average time taken for the human
+            demonstration versus robot inference.</p>
         </div>
       </div>
 
       <div class="bottom-images">
         <div class="image-case">
           <img src="images/force_seen.png" alt="Peak Force Comparison (In Distribution)">
-          <p class="caption">Comparison of Peak Force (In Distribution)</p>
+          <p class="caption">Comparison between peak component force exerted on
+            batteries between the human demonstration and robot inference (In Distribution)</p>
         </div>
         <div class="image-case">
           <img src="images/force_unseen.png" alt="Peak Force Comparison (Out of Distribution)">
-          <p class="caption">Comparison of Peak Force (Out of Distribution)</p>
+          <p class="caption">Comparison between peak component force exerted on
+            batteries between the human demonstration and robot inference (Out of Distribution)</p>
         </div>
       </div>
 
       <div class="image-single">
         <div class="image-case">
           <img src="images/force_line.png" alt="Force Trend" class="small-image">
-          <p class="caption">Force Trend Over Time</p>
+          <p class="caption">Force Trend During Single Battery Prying Task:</p>
         </div>
       </div>
       <div class="image-single">
         <div class="image-case">
           <img src="images/failure_force.png" alt="Failure Mode" class="large-image">
-          <p class="caption">Representative Failure Mode</p>
+          <p class="caption">Example Force Trend During Failure [Vision-only]</p>
         </div>
       </div>
     </div>
