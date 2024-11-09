@@ -108,7 +108,7 @@
     </div>
 
     <div class="container demo-videos">
-      <center><h2 class="sectitle">Project Demos</h2></center>
+      <center><h2 class="sectitle">Our Method</h2></center>
       <div class="video-row">
         <div class="video-case">
           <video controls playsinline autoplay muted loop>
@@ -136,6 +136,35 @@
         </div>
       </div>
     </div>
+    <div class="container" id="failure-cases">
+      <center><h2 class="sectitle">Representative Failure Cases (Benchmark Methods)</h2></center>
+      <div class="failure-grid">
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/fail1-converted.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Failure Mode 1</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/fail2-converted.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Failure Mode 2</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/fail3.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Failure Mode 3</p>
+        </div>
+        <div class="video-case">
+          <video controls playsinline autoplay muted loop>
+            <source src="videos/fail4-converted.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Failure Mode 4</p>
+        </div>
+      </div>
+    </div>
 
     <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
@@ -147,27 +176,20 @@
     <div class="container" id="abstract">
       <center><h2 class="sectitle">Abstract</h2></center>
       <p class="text">
-        Usage of battery powered products have been
-        significantly increasing in recent years from automotive, house
-        hold products and electronics. However, compared to increase
-        in manufactured batteries, means to recycle and repurpose
-        batteries is limited. Batteries are usually stored in casing or
-        products in fastened manner and is often hard to manipulate
-        and allow for little tolerance. To address this issue, we propose
-        battery extraction from different parts using diffusion policy
-        that have proven to be able to learn from human behavior
-        and robustly learn sequence of actions. Particularly, this work
-        proposes a diffusion policy for action generation conditioned
-        on vision and force data. We validate our method on bimanual
-        setup where one arm is responsible for battery extraction
-        and the other arm is responsible for holding, transporting
-        and dumping the extracted batteries. We test our method
-        on various kinds of battery-powered products and show that
-        our model can effectively perform extraction of the battery.
-        Our contributions include a full robotic framework for battery
-        extraction and recycling and a novel approach to encode force
-        data for diffusion policy training for conditioning generated
-        actions on extra sensor modality. 
+        Using force modality in contact-rich manipulation
+        tasks is a widely studied problem. However, when combining
+        low-dimensional force data with high-dimensional image data,
+        the force information may be diluted, limiting its impact during
+        task execution. To address this issue, we propose a method that
+        effectively integrates force with image data for diffusion policies.
+        We validate our approach on a compliant object-prying task
+        that demands high precision and multi-step planning. Tested
+        across various battery-powered products, our model achieves
+        a 96% success rate, enabling zero-shot transfer to unseen
+        objects and battery types—an improvement of 55% over the
+        baseline. Key contributions include a cross-attention framework
+        for learning relationships between these modalities and a novel
+        augmentation method for force data. 
       </p>
     </div>
 
@@ -347,34 +369,6 @@
       </div>
     </div>
 
-    <div class="container" id="failure-cases">
-      <center><h2 class="sectitle">Representative Failure Cases</h2></center>
-      <div class="failure-grid">
-        <div class="video-case">
-          <video controls playsinline autoplay muted loop>
-            <source src="videos/fail1-converted.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Failure Mode 1</p>
-        </div>
-        <div class="video-case">
-          <video controls playsinline autoplay muted loop>
-            <source src="videos/fail2-converted.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Failure Mode 2</p>
-        </div>
-        <div class="video-case">
-          <video controls playsinline autoplay muted loop>
-            <source src="videos/fail3.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Failure Mode 3</p>
-        </div>
-        <div class="video-case">
-          <video controls playsinline autoplay muted loop>
-            <source src="videos/fail4-converted.mp4" type="video/mp4">
-          </video>
-          <p class="caption">Failure Mode 4</p>
-        </div>
-      </div>
-    </div>
+    
   </body>
 </html>
