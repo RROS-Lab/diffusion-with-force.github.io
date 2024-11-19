@@ -48,8 +48,8 @@
     </div>
 
     <center>
-      <h1 class="title">Compliant Object Manipulation for Tight Tolerance Object Using Diffusion
-        Policy with Force Modality</h1>
+      <h1 class="title">Robotic Compliant Object Prying Using Diffusion Policy Guided by Vision
+        and Force Observations</h1>
     </center>
 
     <br>
@@ -57,7 +57,7 @@
       <tr>
         <td align=center width=150px>
           <center>
-            <span class="author">Jeon Ho Kang</a><sup>1</sup></span>
+            <span class="author">Jeon Ho Kang</a></span>
           </center>
         </td>
         <td align=center width=150px>
@@ -72,7 +72,7 @@
         </td>
         <td align=center width=190px>
           <center>
-            <span class="author">Satyandra K. Gupta</a><sup>1</sup></span>
+            <span class="author">Satyandra K. Gupta</a></span>
           </center>
         </td>
       </tr>
@@ -170,20 +170,26 @@
     <div class="container" id="abstract">
       <center><h2 class="sectitle">Abstract</h2></center>
       <p class="text">
-        Using force modality in contact-rich manipulation
-        tasks is a widely studied problem. However, when combining
-        low-dimensional force data with high-dimensional image data,
-        the force information may be diluted, limiting its impact during
-        task execution. To address this issue, we propose a method that
-        effectively integrates force with image data for diffusion policies.
-        We validate our approach on a compliant object-prying task
-        that demands high precision and multi-step planning. Tested
-        across various battery-powered products, our model achieves
-        a 96% success rate, enabling zero-shot transfer to unseen
-        objects and battery types—an improvement of 55% over the
-        baseline. Key contributions include a cross-attention framework
-        for learning relationships between these modalities and a novel
-        augmentation method for force data. 
+        The growing adoption of batteries in the electric
+        vehicle industry and various consumer products has created
+        an urgent need for effective recycling solutions. These products
+        often contain a mix of compliant and rigid components, making
+        robotic disassembly a critical step toward achieving scalable
+        recycling processes. Diffusion policy has emerged as a promising
+        approach for learning low-level skills in robotics. To effectively
+        apply diffusion policy to contact-rich tasks, incorporating force
+        as feedback is essential. In this paper, we apply diffusion
+        policy with vision and force in a compliant object prying
+        task. However, when combining low-dimensional contact force
+        with high-dimensional image, the force information may be
+        diluted. To address this issue, we propose a method that
+        effectively integrates force with image data for diffusion policy
+        observations. We validate our approach on a battery prying task
+        that demands high precision and multi-step execution. Tested
+        on a range of battery-powered products, our model achieves
+        a 96% success rate, marking a 55% improvement over the
+        vision-only baseline. Our method also demonstrates zero-shot
+        transfer capability to handle unseen objects and battery types.
       </p>
     </div>
     <div class="divider"></div>
@@ -191,7 +197,10 @@
     <div class="container" id="network">
       <center><h2 class="sectitle">Network Architecture</h2></center>
       <div class="container">
-        <img src="images/system_architecture_opt3.png"></img>
+        <img src="images/steps_system.png.png"></img>
+      </div>
+      <div class="container">
+        <img src="images/overview_system.png.png"></img>
       </div>
     </div>
 
