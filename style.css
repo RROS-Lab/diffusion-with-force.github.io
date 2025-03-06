@@ -362,7 +362,37 @@ a:hover {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 1rem;
+  justify-items: center;
 }
+/* Styling for Edge Cases 2x2 Grid */
+/* Grid layout for Edge Cases */
+.edge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+  gap: 20px;
+  padding: 1rem;
+  justify-items: center;
+}
+
+/* Ensure the last video spans across both columns in the center */
+.video-center {
+  grid-column: span 2; /* Spans across two columns */
+  justify-self: center;
+  max-width: 60%; /* Adjust size if needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .edge-grid {
+    grid-template-columns: 1fr; /* Stack videos in one column */
+  }
+
+  .video-center {
+    grid-column: auto; /* Normal placement for mobile */
+    max-width: 100%;
+  }
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
