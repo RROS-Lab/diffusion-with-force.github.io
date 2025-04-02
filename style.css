@@ -401,5 +401,11 @@ a:hover {
       grid-template-columns: 1fr;
   }
 }
+pre {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 
 
